@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TechPro — Technology, Simplified</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="topbar">
+
+    <a class="logo" href="#">
+      <span class="logo-mark">T</span>
+      <span>TECH<span class="green">PRO</span></span>
+    </a>
+
+    <nav>
+      <button onclick="scrollToSection('services')">Services</button>
+      <button onclick="openAI()">Assasson Pro</button>
+      <button onclick="openShop()">Shop</button>
+    </nav>
+
+    <div class="status">
+      <span class="status-dot"></span>
+      SYSTEM ONLINE
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-badge">
+        <span>✦</span>
+        THE NEXT GENERATION OF TECH
+      </div>
+
+      <h1>
+        Technology
+        <br>
+        <span>built differently.</span>
+      </h1>
+
+      <p class="hero-text">
+        Welcome to TechPro — your place for technology,
+        intelligent tools, market information, and more.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-button" onclick="openAI()">
+          <span>🤖</span>
+          Launch Assasson Pro
+          <b>→</b>
+        </button>
+
+        <button class="secondary-button" onclick="openShop()">
+          Explore TechPro Shop
+          <b>→</b>
+        </button>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <strong>01</strong>
+          <span>AI PLATFORM</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>TECH SHOP</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>MARKET DATA</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">WHAT WE BUILD</span>
+          <h2>The TechPro ecosystem.</h2>
+        </div>
+
+        <p>
+          Everything you need, brought together
+          in one modern platform.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+        <button class="service-card ai-card" onclick="openAI()">
+
+          <div class="card-top">
+            <div class="service-icon">🤖</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">01</div>
+
+          <h3>Assasson Pro</h3>
+
+          <p>
+            Your intelligent digital assistant.
+            Ask questions, explore ideas, and get help.
+          </p>
+
+          <span class="card-link">Launch AI →</span>
+
+        </button>
+
+
+        <button class="service-card shop-card" onclick="openShop()">
+
+          <div class="card-top">
+            <div class="service-icon">🛒</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">02</div>
+
+          <h3>TechPro Shop</h3>
+
+          <p>
+            Discover technology and products
+            through the TechPro marketplace.
+          </p>
+
+          <span class="card-link">Visit Shop →</span>
+
+        </button>
+
+
+        <button class="service-card stock-card" onclick="openStocks()">
+
+          <div class="card-top">
+            <div class="service-icon">📈</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">03</div>
+
+          <h3>Market Center</h3>
+
+          <p>
+            Explore stock information and
+            follow market movements.
+          </p>
+
+          <span class="card-link">View Markets →</span>
+
+        </button>
+
+
+        <button class="service-card update-card" onclick="openUpdates()">
+
+          <div class="card-top">
+            <div class="service-icon">⚡</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">04</div>
+
+          <h3>Tech Updates</h3>
+
+          <p>
+            Keep up with the latest technology
+            news and announcements.
+          </p>
+
+          <span class="card-link">See Updates →</span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI -->
+
+    <section id="aiPanel" class="ai-section">
+
+      <div class="ai-panel">
+
+        <div class="ai-top">
+
+          <div class="ai-brand">
+
+            <div class="ai-orb">
+              <span>✦</span>
+            </div>
+
+            <div>
+              <div class="ai-name">ASSASSON PRO</div>
+              <div class="ai-subtitle">TECHPRO INTELLIGENCE</div>
+            </div>
+
+          </div>
+
+          <div class="ai-live">
+            <span></span>
+            READY
+          </div>
+
+        </div>
+
+
+        <div class="ai-content">
+
+          <div class="ai-welcome">
+
+            <span class="small-label">YOUR AI ASSISTANT</span>
+
+            <h2>
+              What can I help
+              <span>you with?</span>
+            </h2>
+
+            <p>
+              Ask questions, brainstorm ideas,
+              learn something new, or explore technology.
+            </p>
+
+          </div>
+
+
+          <div class="chat-area">
+
+            <div id="aiMessage" class="ai-message">
+              <div class="message-icon">✦</div>
+
+              <div>
+                <strong>Assasson Pro</strong>
+                <p>
+                  Hello! I'm ready when you are.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="chat-input">
+
+              <input
+                id="question"
+                type="text"
+                placeholder="Ask Assasson Pro anything..."
+                onkeydown="handleEnter(event)"
+              >
+
+              <button onclick="askAI()">
+                →
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURE -->
+
+    <section class="feature-section">
+
+      <div class="feature-content">
+
+        <span class="section-label">TECHPRO VISION</span>
+
+        <h2>
+          One platform.
+          <br>
+          <span>Endless possibilities.</span>
+        </h2>
+
+        <p>
+          We're building a place where technology,
+          information, and intelligent tools work together.
+        </p>
+
+        <button onclick="notify('More TechPro features coming soon!')">
+          Explore TechPro
+          <span>→</span>
+        </button>
+
+      </div>
+
+      <div class="feature-decoration">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="core">
+          T
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-logo">
+      TECH<span>PRO</span>
+    </div>
+
+    <p>
+      Technology, simplified.
+    </p>
+
+    <span>
+      TECHPRO © 2026
+    </span>
+
+  </footer>
+
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TechPro — Technology, Simplified</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="topbar">
+
+    <a class="logo" href="#">
+      <span class="logo-mark">T</span>
+      <span>TECH<span class="green">PRO</span></span>
+    </a>
+
+    <nav>
+      <button onclick="scrollToSection('services')">Services</button>
+      <button onclick="openAI()">Assasson Pro</button>
+      <button onclick="openShop()">Shop</button>
+    </nav>
+
+    <div class="status">
+      <span class="status-dot"></span>
+      SYSTEM ONLINE
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-badge">
+        <span>✦</span>
+        THE NEXT GENERATION OF TECH
+      </div>
+
+      <h1>
+        Technology
+        <br>
+        <span>built differently.</span>
+      </h1>
+
+      <p class="hero-text">
+        Welcome to TechPro — your place for technology,
+        intelligent tools, market information, and more.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-button" onclick="openAI()">
+          <span>🤖</span>
+          Launch Assasson Pro
+          <b>→</b>
+        </button>
+
+        <button class="secondary-button" onclick="openShop()">
+          Explore TechPro Shop
+          <b>→</b>
+        </button>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <strong>01</strong>
+          <span>AI PLATFORM</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>TECH SHOP</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>MARKET DATA</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">WHAT WE BUILD</span>
+          <h2>The TechPro ecosystem.</h2>
+        </div>
+
+        <p>
+          Everything you need, brought together
+          in one modern platform.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+        <button class="service-card ai-card" onclick="openAI()">
+
+          <div class="card-top">
+            <div class="service-icon">🤖</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">01</div>
+
+          <h3>Assasson Pro</h3>
+
+          <p>
+            Your intelligent digital assistant.
+            Ask questions, explore ideas, and get help.
+          </p>
+
+          <span class="card-link">Launch AI →</span>
+
+        </button>
+
+
+        <button class="service-card shop-card" onclick="openShop()">
+
+          <div class="card-top">
+            <div class="service-icon">🛒</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">02</div>
+
+          <h3>TechPro Shop</h3>
+
+          <p>
+            Discover technology and products
+            through the TechPro marketplace.
+          </p>
+
+          <span class="card-link">Visit Shop →</span>
+
+        </button>
+
+
+        <button class="service-card stock-card" onclick="openStocks()">
+
+          <div class="card-top">
+            <div class="service-icon">📈</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">03</div>
+
+          <h3>Market Center</h3>
+
+          <p>
+            Explore stock information and
+            follow market movements.
+          </p>
+
+          <span class="card-link">View Markets →</span>
+
+        </button>
+
+
+        <button class="service-card update-card" onclick="openUpdates()">
+
+          <div class="card-top">
+            <div class="service-icon">⚡</div>
+            <span class="arrow">↗</span>
+          </div>
+
+          <div class="service-number">04</div>
+
+          <h3>Tech Updates</h3>
+
+          <p>
+            Keep up with the latest technology
+            news and announcements.
+          </p>
+
+          <span class="card-link">See Updates →</span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI -->
+
+    <section id="aiPanel" class="ai-section">
+
+      <div class="ai-panel">
+
+        <div class="ai-top">
+
+          <div class="ai-brand">
+
+            <div class="ai-orb">
+              <span>✦</span>
+            </div>
+
+            <div>
+              <div class="ai-name">ASSASSON PRO</div>
+              <div class="ai-subtitle">TECHPRO INTELLIGENCE</div>
+            </div>
+
+          </div>
+
+          <div class="ai-live">
+            <span></span>
+            READY
+          </div>
+
+        </div>
+
+
+        <div class="ai-content">
+
+          <div class="ai-welcome">
+
+            <span class="small-label">YOUR AI ASSISTANT</span>
+
+            <h2>
+              What can I help
+              <span>you with?</span>
+            </h2>
+
+            <p>
+              Ask questions, brainstorm ideas,
+              learn something new, or explore technology.
+            </p>
+
+          </div>
+
+
+          <div class="chat-area">
+
+            <div id="aiMessage" class="ai-message">
+              <div class="message-icon">✦</div>
+
+              <div>
+                <strong>Assasson Pro</strong>
+                <p>
+                  Hello! I'm ready when you are.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="chat-input">
+
+              <input
+                id="question"
+                type="text"
+                placeholder="Ask Assasson Pro anything..."
+                onkeydown="handleEnter(event)"
+              >
+
+              <button onclick="askAI()">
+                →
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURE -->
+
+    <section class="feature-section">
+
+      <div class="feature-content">
+
+        <span class="section-label">TECHPRO VISION</span>
+
+        <h2>
+          One platform.
+          <br>
+          <span>Endless possibilities.</span>
+        </h2>
+
+        <p>
+          We're building a place where technology,
+          information, and intelligent tools work together.
+        </p>
+
+        <button onclick="notify('More TechPro features coming soon!')">
+          Explore TechPro
+          <span>→</span>
+        </button>
+
+      </div>
+
+      <div class="feature-decoration">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="core">
+          T
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-logo">
+      TECH<span>PRO</span>
+    </div>
+
+    <p>
+      Technology, simplified.
+    </p>
+
+    <span>
+      TECHPRO © 2026
+    </span>
+
+  </footer>
+
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
